@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Criação da sua conta</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 110px;
+        }
+
+        input {
+            display: block;
+            margin-bottom: 10px;
+            padding: 3px;
+        }
+
+        button {
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Faça sua conta!</h1>
+
+    <form id="formulario">
+        <label>Nome:</label>
+        <input type="text" id="nome" required>
+
+        <label>Nome de usuario:</label>
+        <input type="password" id="nome" required>
+
+        <label>E-mail:</label>
+        <input type="email" id="email" required>
+
+        <label>Confirme email:</label>
+        <input type="password" id="email" required>
+
+        <label>Senha:</label>
+        <input type="password" id="tel" required>
+        
+        <label>Confirme a senha:</label>
+        <input type="password" id="tel" required>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+
+    <ol id="listaPessoa"></ol>
+
+    <script>
+        // Array para armazenar os alunos
+        let pessoa = [];
+
+        const formulario = document.getElementById("formulario");
+        const lista = document.getElementById("listaPessoa");
+
+        formulario.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Captura os valores
+            let nome = document.getElementById("nome").value;
+            let usuario = document.getElementById("nome2").value;
+            let email = document.getElementById("email").value;
+            let email2 = document.getElementById("email").value;
+            let senha = document.getElementById("tel").value;
+            let senha2 = document.getElementById("tel").value;
+            
+
+            // Cria o objeto aluno
+            let pessoa = {
+                nome: nome,
+                usuario: nome,
+                email: email,
+                email2:email,
+                senha: senha,
+                senha2: senha,
+            };
+
+          
+            // Limpa o formulário
+            formulario.reset();
+        });
+    </script>
+
+</body>
+</html>
